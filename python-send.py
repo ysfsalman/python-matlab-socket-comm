@@ -1,6 +1,7 @@
 # Import socket module 
 import socket                
 import time  
+
 # Create a socket object 
 s = socket.socket()          
   
@@ -19,16 +20,12 @@ while True:
 x=0
 m = bytes()
 while True:
-    y = [x+1, x+4, x+5]
-    
+    y = [x+1, x+4, x+5]    
     for i in y:
       m += (-i).to_bytes(2,'big',signed=True)
     print(y)
-    s.send(m)
-    
-    x = x + 1
-
-    
+    s.send(m)    
+    x = x + 1  
     m =  b''
     time.sleep(0.005)
 # close the connection 

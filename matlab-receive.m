@@ -11,15 +11,16 @@ count = 0;
 fopen(t);
 while 1
     if t.BytesAvailable
-    data=fread(t, 3, 'int16')
-    i = 1;
-    count = 0;
-    elseif ~t.BytesAvailable && i == 1
-        count = count+1;
-        if count == 50
-        break       
-        end
-        
+    data=fread(t, 4, 'int16')/100    
+%     i = 1;
+%     count = 0;
+%     
+%     elseif ~t.BytesAvailable && i == 1
+%         count = count+1;
+%         if count == 5000
+%             
+%         break       
+%         end        
     end
     
 end
